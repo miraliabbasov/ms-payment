@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Payment of balance table
+      author: MIRALI ABBASOV
+      changes:
+        - createTable:
+            tableName: balances
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: api_key
+                  type: varchar(250)
+              - column:
+                  name: amount
+                  type: numeric(16,2)
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: constants
+                  type: varchar(250)
+              - column:
+                  name: status
+                  type: varchar(250)
+
+
+
+
+

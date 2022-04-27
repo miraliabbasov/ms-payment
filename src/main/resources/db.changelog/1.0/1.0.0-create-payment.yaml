@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Payment table
+      author: MIRALI ABBASOV
+      changes:
+        - createTable:
+            tableName: payment
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: card_number
+                  type: varchar(250)
+              - column:
+                  name: amount
+                  type: numeric(16,2)
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false
+              - column:
+                  name: constants
+                  type: varchar(250)
+              - column:
+                  name: status
+                  type: varchar(250)
+
+
+
+
+
